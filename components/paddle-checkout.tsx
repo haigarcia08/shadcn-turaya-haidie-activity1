@@ -1,0 +1,63 @@
+"use client";
+
+import React, { useEffect, useState, useCallback } from "react";
+import { cn } from "@/lib/utils";
+import {Template, templates} from "@/app/data";
+import usePaddle from "@/hooks/paddle";
+
+type PaddleCheckoutType = {
+  children: React.ReactNode;
+  template_name?: string;
+  className?: string;
+};
+
+export default function PaddleCheckout({ children, className, template_name }: PaddleCheckoutType) {
+  const paddle = usePaddle();
+  const [selectProduct, setSelectProduct] = useState<Template | null>(null);
+
+  // useEffect içinde product_key değiştiğinde ürün seçimini güncelle
+  useEffect(() => {
+    if (template_name) {
+      console.log(template_name)
+      const product = templates.find((item) => item.name === template_name);
+      setSelectProduct(product || null); // Eğer ürün bulunamazsa null yap
+    }
+  }, [template_name]);
+
+  // checkout işlemini başlatan fonksiyon
+  const openCheckout = useCallback(() => {
+    if (!selectProduct || !paddle) return;
+
+    const paddleEnv = process.env.NEXT_PUBLIC_PADDLE_ENV as "production" | "sandbox" | undefined;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+    if (!paddleEnv || !baseUrl) {
+      console.error("Paddle environment or base URL is missing");
+      return;
+    }
+
+    const priceId = selectProduct.paddle_id[paddleEnv];
+    if (!priceId) {
+      console.error("Product does not have a valid priceId for the selected environment");
+      return;
+    }
+
+    paddle.Checkout.open({
+      settings: {
+        // successUrl: `${baseUrl}/thank-you?id=${selectProduct.id}`
+      },
+      items: [
+        {
+          priceId,
+          quantity: 1
+        }
+      ]
+    });
+  }, [selectProduct, paddle]);
+
+  return (
+    <div className={cn("inline", className)} onClick={openCheckout}>
+      {children}
+    </div>
+  );
+}
