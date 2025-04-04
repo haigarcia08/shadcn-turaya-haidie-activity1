@@ -1,32 +1,17 @@
 import { MetadataRoute } from "next";
-import {templates, categories} from "@/app/data";
+import {routes} from "@/lib/routes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
-    const templatesData: MetadataRoute.Sitemap = templates
-        .map((product) => ({
-            url: `${process.env.BASE_URL}/${product.slug}`,
-            lastModified: new Date(),
-            changeFrequency: "daily",
-            priority: 1
-        }));
-
-    const categoriesData: MetadataRoute.Sitemap = categories
-        .map((category) => ({
-            url: `${process.env.BASE_URL}/${category.slug}`,
+    const routesList: MetadataRoute.Sitemap = routes
+        .map((route) => ({
+            url: route.url,
             lastModified: new Date(),
             changeFrequency: "daily",
             priority: 1
         }));
 
     return [
-        {
-            url: `${process.env.BASE_URL}`,
-            lastModified: new Date(),
-            changeFrequency: "daily",
-            priority: 1
-        },
-        ...templatesData,
-        ...categoriesData,
+        ...routesList,
     ];
 }

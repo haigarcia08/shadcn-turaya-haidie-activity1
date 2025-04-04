@@ -1,5 +1,3 @@
-import {templates} from "@/app/data";
-import TemplateCard from "@/components/template-card";
 import {Skeleton} from "@/components/ui/skeleton";
 
 export default function Home() {

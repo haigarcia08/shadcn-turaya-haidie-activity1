@@ -1,36 +1,44 @@
-import Image from "next/image"
 import {Button} from "@/components/ui/button"
-import {categories, Category, Template, templates} from "@/app/data";
+import {Product, products} from "@/app/data";
 import Link from "next/link";
-import {cn} from "@/lib/utils";
 import PaddleCheckout from "@/components/paddle-checkout";
-import {TimeAgo} from "@/components/time-ago";
-import TemplateInfo from "@/app/[slug]/info";
 import {GithubIcon} from "lucide-react";
+import {Route} from "@/lib/routes";
+import {TimeAgo} from "@/components/time-ago";
+import {Skeleton} from "@/components/ui/skeleton";
 
-type Props = { template: Template }
+type Props = { route: Route }
 
-export default function TemplateDetail({template}: Props) {
-
-    // @ts-ignore
-    const variantTemplates = template.variants.length > 0 ? templates.filter(z => [...template.variants].includes(z.id)) : [];
-
-    const current_categories: Category[] = []
-
-    template.categories.map((id) => {
-        const c = categories.find(e => e.id === id)
-        current_categories.push(c as Category)
-    })
+export default function TemplateDetail({route}: Props) {
+    
+    const product = products.find((item) => item.key === route.key) as Product
 
     return (
         <div className="container mx-auto px-4 space-y-14 py-14">
-            <div className="max-w-screen-lg mx-auto grid grid-cols-2">
-                <div className="space-y-6">
-                    <div className="space-y-3">
-                        <h1 className="text-3xl font-bold">{template.name} — {template.title}</h1>
-                        <p className="text-muted-foreground text-lg">{template.description}</p>
-                    </div>
+            <div className="max-w-screen-xl mx-auto grid grid-cols-2 gap-4">
+                <div className="space-y-6 lg:pe-16">
                     <div className="space-y-4">
+                        <h1 className="text-3xl lg:text-4xl font-bold">{product.title}</h1>
+                        <p className="text-muted-foreground text-lg">{product.description}</p>
+                    </div>
+
+                    <div className="flex gap-3">
+                        {
+                            product.price !== '' ? <PaddleCheckout product_key={product.key}>
+                                <Button>
+                                     {`Buy for ${product.price}`}
+                                </Button>
+                            </PaddleCheckout> : <Button asChild>
+                                <Link href={product.github_url} target="_blank">
+                                    <GithubIcon/> Github
+                                </Link>
+                            </Button>
+                        }
+                        <Button variant="outline" asChild>
+                            <Link href={product.preview_url} target="_blank">Live Preview</Link>
+                        </Button>
+                    </div>
+                    {/*<div className="space-y-4">
                         {
                             variantTemplates.length > 1 && <div className="flex gap-4 mt-6">
                                 {
@@ -47,40 +55,30 @@ export default function TemplateDetail({template}: Props) {
                                 }
                             </div>
                         }
-                    </div>
-                    <div className="flex gap-3">
-                        {
-                            template.price !== '' ? <PaddleCheckout template_name={template.name}>
-                                <Button>
-                                    Buy {template.name} for {template.price}
-                                </Button>
-                            </PaddleCheckout> : <Button asChild>
-                                <Link href={template.github_url} target="_blank">
-                                    <GithubIcon/> Github
-                                </Link>
-                            </Button>
-                        }
-                        <Button variant="outline" asChild>
-                            <Link href={template.preview_url} target="_blank">Live Preview</Link>
-                        </Button>
-                    </div>
+                    </div>*/}
+
+
+                </div>
+                <div className="space-y-4">
+                    <Skeleton className="w-full aspect-4/3" />
+                    <Skeleton className="w-full aspect-4/3" />
+
+                    {/*{
+                        product.images.map((image, key) => <figure className="aspect-square overflow-hidden relative" key={key}>
+                            <Image
+                                src={image}
+                                fill
+                                className="object-cover object-top"
+                                alt={product.title.toLowerCase()}
+                            />
+                            <Skeleton className="w-full aspect-4/3" />
+                        </figure>)
+                    }*/}
+                    <time className="text-muted-foreground text-xs">Last updated: <TimeAgo date={product.last_updated}/></time>
                 </div>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-3">
-                {
-                    template.images.map((image, key) => <figure className="aspect-square overflow-hidden relative" key={key}>
-                        <Image
-                            src={image}
-                            fill
-                            className="object-cover object-top"
-                            alt={template.title.toLowerCase()}
-                        />
-                    </figure>)
-                }
-            </div>
-
-            <div className="max-w-screen-lg mx-auto space-y-14">
+            {/*<div className="max-w-screen-lg mx-auto space-y-14">
 
                 <p className="text-black/70">{template.content}</p>
 
@@ -101,7 +99,7 @@ export default function TemplateDetail({template}: Props) {
                 </div>
 
                 <TemplateInfo template={template} categories={current_categories}/>
-            </div>
+            </div>*/}
         </div>
     )
 }

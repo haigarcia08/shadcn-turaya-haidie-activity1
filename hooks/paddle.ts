@@ -5,7 +5,7 @@ import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import {useThanksDialogStore} from "@/store/thanks-dialog-store";
 import {useSpinnerStore} from "@/store/spinner-store";
-import {templates} from "@/app/data";
+import {products} from "@/app/data";
 
 type PaddleEventName = "checkout.loaded" | "checkout.completed";
 
@@ -35,7 +35,7 @@ export default function usePaddle() {
         const currentPaddle = paddleRef.current;
         if ((currentPaddle && name === "checkout.loaded") || name === "checkout.completed") {
             const priceId = data?.items?.[0]?.price_id;
-            const currentTemplate = templates.find(
+            const currentTemplate = products.find(
                 (p) =>
                     p.paddle_id[process.env.NEXT_PUBLIC_PADDLE_ENV as "production" | "sandbox"] == priceId
             );
@@ -48,7 +48,7 @@ export default function usePaddle() {
 
                     // kendim ve musteri icin eposta gonder
                     await axios.post("/api/emails/new-sale", {
-                        productName: `${currentTemplate?.name} - ${currentTemplate?.title}`,
+                        productName: currentTemplate?.title,
                         customerEmail: data?.customer?.email ?? "",
                         price: `$${data.totals.total}`,
                         license_key: ''

@@ -55,18 +55,13 @@
 }
 
 :root {
-  --text-lg: 1.05rem;
-  --text-base: 0.85rem;
-  --text-sm: 0.8rem;
-  --spacing: 0.242222rem;
-  --radius: .2rem;
   --background: var(--color-surface-100);
   --foreground: var(--color-surface-950);
   --card: var(--color-surface-100);
   --card-foreground: var(--color-surface-950);
   --popover: var(--color-surface-50);
   --popover-foreground: var(--color-surface-950);
-  --primary: var(--color-primary-500);
+  --primary: var(--color-black);
   --primary-foreground: var(--color-surface-50);
   --secondary: var(--color-secondary-500);
   --secondary-foreground: var(--color-surface-950);

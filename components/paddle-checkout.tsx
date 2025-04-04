@@ -2,27 +2,26 @@
 
 import React, { useEffect, useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
-import {Template, templates} from "@/app/data";
+import {Product, products} from "@/app/data";
 import usePaddle from "@/hooks/paddle";
 
 type PaddleCheckoutType = {
   children: React.ReactNode;
-  template_name?: string;
+  product_key?: string;
   className?: string;
 };
 
-export default function PaddleCheckout({ children, className, template_name }: PaddleCheckoutType) {
+export default function PaddleCheckout({ children, className, product_key }: PaddleCheckoutType) {
   const paddle = usePaddle();
-  const [selectProduct, setSelectProduct] = useState<Template | null>(null);
+  const [selectProduct, setSelectProduct] = useState<Product | null>(null);
 
   // useEffect içinde product_key değiştiğinde ürün seçimini güncelle
   useEffect(() => {
-    if (template_name) {
-      console.log(template_name)
-      const product = templates.find((item) => item.name === template_name);
+    if (product_key) {
+      const product = products.find((item) => item.key === product_key);
       setSelectProduct(product || null); // Eğer ürün bulunamazsa null yap
     }
-  }, [template_name]);
+  }, [product_key]);
 
   // checkout işlemini başlatan fonksiyon
   const openCheckout = useCallback(() => {

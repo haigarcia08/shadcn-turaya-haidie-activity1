@@ -4,12 +4,6 @@ import {Button} from "@/components/ui/button"
 import {Logo} from "@/components/logo"
 import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
 import {categories} from "@/app/data";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import {DialogHeader} from "next/dist/client/components/react-dev-overlay/ui/components/dialog";
 import {DialogTitle} from "@radix-ui/react-dialog";
 import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
@@ -18,7 +12,7 @@ import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
 export function SiteHeader() {
     return (
         <header
-            className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur border-border/70 supports-[backdrop-filter]:bg-background/60">
             <div className="container mx-auto px-4 flex h-16 items-center">
                 <div className="mr-4 flex">
                     <Link href="/" className="mr-6 flex items-center space-x-2">

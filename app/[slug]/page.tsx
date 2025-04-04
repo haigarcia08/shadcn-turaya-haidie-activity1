@@ -1,7 +1,7 @@
-import {categories, templates} from "@/app/data";
 import TemplateDetail from "@/app/[slug]/template-detail";
-import CategoryDetail from "@/app/[slug]/category-detail";
 import type {Metadata} from "next";
+import {routes} from "@/lib/routes";
+import {Product, products} from "@/app/data";
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -12,42 +12,31 @@ export async function generateMetadata(
 ): Promise<Metadata> {
     const { slug } = await params
 
-    const template = getTemplate(slug)
-    const category = getCategory(slug)
+    const route = getRoute(slug)
 
-    if(template){
+    if(route){
+        const product = products.find((item) => item.key === route.key) as Product
         return {
-            title: template.meta_title,
+            title: product.meta.title,
+            description: product.meta.description,
             /*openGraph: {
                 images: ['/some-specific-page-image.jpg', ...previousImages],
             },*/
         }
     }
 
-    if(category){
-        return {
-            title: category.meta_title,
-        }
-    }
-
     return {}
 }
 
-const getTemplate = (slug: string) => {
-    return templates.find((template) => template.slug === slug)
-}
-
-const getCategory = (slug: string) => {
-    return categories.find((category) => category.slug === slug)
+const getRoute = (slug: string) => {
+    return routes.find((item) => item.key === slug)
 }
 
 export default async function TemplatePage({ params }: { params: Promise<{ slug: string }>}) {
     const { slug } = await params
 
-    const template = getTemplate(slug)
-    const category = getCategory(slug)
+    const route = getRoute(slug)
 
-    if(template) return <TemplateDetail template={template}/>
-    if(category) return <CategoryDetail category={category}/>
+    if(route) return <TemplateDetail route={route}/>
 }
 

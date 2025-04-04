@@ -1,24 +1,17 @@
-export const templates = [
+export const products = [
     {
-        id: 1,
-        slug: 'sass-landing-page-cosmic',
-        name: "Cosmic",
-        title: "SaaS Landing Page",
-        description: "A modern, responsive landing page template for developers, optimized for SaaS projects. Built with shadcn/ui, Tailwind CSS, and Next.js.",
-        content: "Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to install PHP, a web server, and any other server software on your local machine. No more worrying about messing up your operating system! Vagrant boxes are completely disposable. If something goes wrong, you can destroy and re-create the box in minutes!",
-        meta_title: "Cosmic - SaaS Landing Page Shadcn Template",
-        meta_description: "A modern, responsive landing page template for developers, optimized for SaaS projects. Built with shadcn/ui, Tailwind CSS, and Next.js.",
+        title: 'Mail',
+        key: 'mail',
+        description: 'Kanban board template built with Shadcn UI. A sleek and customizable solution for project management and task tracking.',
+        price: '$49',
+        preview_url: '#',
         images: [
             '/cosmic.jpg',
             '/cosmic2.jpg',
             '/cosmic.jpg',
         ],
-        price: "$49",
-        price_label: "Next.js",
-        preview_url: "https://cosmic.shadcnuikit.com/",
         purchase_url: "",
         github_url: "",
-        categories: [2, 3],
         variants: [],
         paddle_id: {
             production: "pri_01jcqbwg15v03ypcak7rm3bbg4",
@@ -26,42 +19,65 @@ export const templates = [
         },
         release_date: '2025-01-01',
         last_updated: '2025-02-01',
-        page_count: 9,
-        componentsTree: ['Header', 'Hero section', 'CTA', 'Contact Form', 'Email Subscribe Form', 'Features Blocks', 'Footer']
+        meta: {
+            title: 'Mail App - Shadcn UI Examples',
+            description: 'Open source mail app template. A slightly improved version of the shadcn/ui example.',
+        }
     },
     {
-        id: 1,
-        slug: 'landing-page-miranda',
-        name: "Miranda",
-        title: "Landing Page Template",
-        description: "A modern, responsive landing page template for developers. Built with shadcn/ui, Tailwind CSS, and React.",
-        content: "",
-        meta_title: "Miranda - Landing Page Shadcn Template",
-        meta_description: "",
+        title: 'Kanban Board',
+        key: 'kanban-board',
+        description: 'Kanban board template built with Shadcn UI. A sleek and customizable solution for project management and task tracking.',
+        price: '',
+        preview_url: '#',
         images: [
-            '/miranda1.png',
-            '/miranda2.png',
-            '/miranda3.png',
+            '/cosmic.jpg',
+            '/cosmic2.jpg',
+            '/cosmic.jpg',
         ],
-        price: "",
-        price_label: "React",
-        preview_url: "https://shadcn-landing-page.vercel.app/",
         purchase_url: "",
-        github_url: "https://github.com/leoMirandaa/shadcn-landing-page",
-        categories: [1, 3],
+        github_url: "",
         variants: [],
         paddle_id: {
-            production: "",
-            sandbox: ""
+            production: "pri_01jcqbwg15v03ypcak7rm3bbg4",
+            sandbox: "pri_01jcte94jhv0dg09fa9x64thmr"
         },
-        release_date: '2024-07-01',
+        release_date: '2025-01-01',
         last_updated: '2025-02-01',
-        page_count: 1,
-        componentsTree: ['Navbar', 'Sidebar(mobile)', 'Hero', 'Sponsors', 'About', 'Stats', 'How It Works', 'Features', 'Services', 'Call-to-Action (CTA)', 'Testimonials', 'Team', 'Pricing', 'Newsletter', 'Frequently Asked Questions(FAQ)', 'Footer']
+        meta: {
+            title: 'Kanban Board - Shadcn UI Examples',
+            description: 'Kanban board template built with Shadcn UI. A sleek and customizable solution for project management and task tracking.',
+            example_url: 'https://pragmatic-board.vercel.app/board'
+        }
     },
+    {
+        title: 'Music App',
+        key: 'music-app',
+        description: 'A modern music app template built with Shadcn UI. Perfect for streaming music, creating playlists, and managing audio content.',
+        price: '',
+        preview_url: '#',
+        images: [
+            '/cosmic.jpg',
+            '/cosmic2.jpg',
+            '/cosmic.jpg',
+        ],
+        purchase_url: "",
+        github_url: "",
+        variants: [],
+        paddle_id: {
+            production: "pri_01jcqbwg15v03ypcak7rm3bbg4",
+            sandbox: "pri_01jcte94jhv0dg09fa9x64thmr"
+        },
+        release_date: '2025-01-01',
+        last_updated: '2025-02-01',
+        meta: {
+            title: 'Music App - Shadcn UI Examples',
+            description: 'A modern music app template built with Shadcn UI. Perfect for streaming music, creating playlists, and managing audio content.',
+        }
+    }
 ] as const
 
-export type Template = (typeof templates)[number];
+export type Product = (typeof products)[number];
 
 export const categories = [
     {
