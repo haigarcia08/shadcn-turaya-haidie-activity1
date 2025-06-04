@@ -1,0 +1,282 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcn",
+  "homepage": "http://localhost:3000",
+  "items": [
+    {
+      "name": "admin-dashboard",
+      "type": "registry:block",
+      "title": "Admin Dashboard",
+      "registryDependencies": [
+        "sidebar",
+        "card",
+        "chart",
+        "select",
+        "toggle-group",
+        "badge",
+        "button",
+        "checkbox",
+        "drawer",
+        "dropdown-menu",
+        "input",
+        "label",
+        "separator",
+        "table",
+        "tabs",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "examples/admin-dashboard/components/app-sidebar.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/app-sidebar.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/chart-area-interactive.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/chart-area-interactive.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/data-table.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/data-table.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/nav-documents.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/nav-documents.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/nav-main.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/nav-main.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/nav-secondary.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/nav-secondary.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/nav-user.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/nav-user.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/section-cards.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/section-cards.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/components/site-header.tsx",
+          "type": "registry:component",
+          "target": "app/admin-dashboard/components/site-header.tsx"
+        },
+        {
+          "path": "examples/admin-dashboard/data.json",
+          "type": "registry:file",
+          "target": "app/admin-dashboard/data.json"
+        },
+        {
+          "path": "examples/admin-dashboard/page.tsx",
+          "type": "registry:page",
+          "target": "app/admin-dashboard/page.tsx"
+        }
+      ]
+    },
+    {
+      "name": "authentication",
+      "type": "registry:block",
+      "title": "Authentication",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "examples/authentication/components/user-auth-form.tsx",
+          "type": "registry:component",
+          "target": "app/authentication/components/user-auth-form.tsx"
+        },
+        {
+          "path": "examples/authentication/page.tsx",
+          "type": "registry:page",
+          "target": "app/authentication/page.tsx"
+        }
+      ]
+    },
+    {
+      "name": "playground",
+      "type": "registry:block",
+      "title": "Playground",
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "hover-card",
+        "label",
+        "slider",
+        "command",
+        "popover",
+        "alert-dialog",
+        "dropdown-menu",
+        "switch",
+        "input",
+        "textarea",
+        "separator",
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "examples/playground/components/code-viewer.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/code-viewer.tsx"
+        },
+        {
+          "path": "examples/playground/components/maxlength-selector.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/maxlength-selector.tsx"
+        },
+        {
+          "path": "examples/playground/components/model-selector.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/model-selector.tsx"
+        },
+        {
+          "path": "examples/playground/components/preset-actions.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/preset-actions.tsx"
+        },
+        {
+          "path": "examples/playground/components/preset-save.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/preset-save.tsx"
+        },
+        {
+          "path": "examples/playground/components/preset-selector.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/preset-selector.tsx"
+        },
+        {
+          "path": "examples/playground/components/preset-share.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/preset-share.tsx"
+        },
+        {
+          "path": "examples/playground/components/temperature-selector.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/temperature-selector.tsx"
+        },
+        {
+          "path": "examples/playground/components/top-p-selector.tsx",
+          "type": "registry:component",
+          "target": "app/playground/components/top-p-selector.tsx"
+        },
+        {
+          "path": "examples/playground/data/models.ts",
+          "type": "registry:file",
+          "target": "app/playground/data/models.ts"
+        },
+        {
+          "path": "examples/playground/data/presets.ts",
+          "type": "registry:file",
+          "target": "app/playground/data/presets.ts"
+        },
+        {
+          "path": "examples/playground/page.tsx",
+          "type": "registry:page",
+          "target": "app/playground/page.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tasks",
+      "type": "registry:block",
+      "title": "Tasks",
+      "registryDependencies": [
+        "badge",
+        "checkbox",
+        "button",
+        "dropdown-menu",
+        "command",
+        "popover",
+        "separator",
+        "select",
+        "input",
+        "table",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "examples/tasks/components/columns.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/columns.tsx"
+        },
+        {
+          "path": "examples/tasks/components/data-table-column-header.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/data-table-column-header.tsx"
+        },
+        {
+          "path": "examples/tasks/components/data-table-faceted-filter.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/data-table-faceted-filter.tsx"
+        },
+        {
+          "path": "examples/tasks/components/data-table-pagination.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/data-table-pagination.tsx"
+        },
+        {
+          "path": "examples/tasks/components/data-table-row-actions.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/data-table-row-actions.tsx"
+        },
+        {
+          "path": "examples/tasks/components/data-table-toolbar.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/data-table-toolbar.tsx"
+        },
+        {
+          "path": "examples/tasks/components/data-table-view-options.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/data-table-view-options.tsx"
+        },
+        {
+          "path": "examples/tasks/components/data-table.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/data-table.tsx"
+        },
+        {
+          "path": "examples/tasks/components/user-nav.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/components/user-nav.tsx"
+        },
+        {
+          "path": "examples/tasks/data/data.tsx",
+          "type": "registry:component",
+          "target": "app/tasks/data/data.tsx"
+        },
+        {
+          "path": "examples/tasks/data/schema.ts",
+          "type": "registry:file",
+          "target": "app/tasks/data/schema.ts"
+        },
+        {
+          "path": "examples/tasks/data/seed.ts",
+          "type": "registry:file",
+          "target": "app/tasks/data/seed.ts"
+        },
+        {
+          "path": "examples/tasks/data/tasks.json",
+          "type": "registry:file",
+          "target": "app/tasks/data/tasks.json"
+        },
+        {
+          "path": "examples/tasks/page.tsx",
+          "type": "registry:page",
+          "target": "app/tasks/page.tsx"
+        }
+      ]
+    }
+  ]
+}

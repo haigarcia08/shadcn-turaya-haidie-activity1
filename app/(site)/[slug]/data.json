@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "href": "admin-dashboard",
+    "meta": {
+      "title": "Admin Dashboard",
+      "description": "A standard clean admin dashboard template.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "admin-dashboard.png",
+      "description": "A standard clean admin dashboard template.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "id": 1,
+    "href": "tasks",
+    "meta": {
+      "title": "Tasks",
+      "description": "Task list. List and filter tasks.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "tasks.png",
+      "description": "Task list. List and filter tasks.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "id": 1,
+    "href": "playground",
+    "meta": {
+      "title": "Playground",
+      "description": "",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "playground.png",
+      "description": "",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "id": 1,
+    "href": "authentication",
+    "meta": {
+      "title": "Authentication",
+      "description": "Authentication pages. Login page, registration page and more",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "authentication.png",
+      "description": "Authentication pages. Login page, registration page and more",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  }
+]

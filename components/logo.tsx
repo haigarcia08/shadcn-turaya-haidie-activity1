@@ -1,13 +1,12 @@
-import {DicesIcon} from "lucide-react"
+import Image from "next/image";
 
 export function Logo() {
-    return (
-        <div className="flex items-center justify-center gap-2">
-            <div className="flex items-center justify-center rounded-lg border border-black/40 p-1">
-                <DicesIcon className="size-4" />
-            </div>
-            <span className="font-semibold">Shadcn Examples</span>
-        </div>
-    )
+  return (
+    <div className="flex items-center justify-center gap-2">
+      <div className="relative size-8">
+        <Image src={`${process.env.BASE_URL}/logo.svg`} fill alt="..." />
+      </div>
+      <span className="hidden font-semibold md:inline">Shadcn Examples</span>
+    </div>
+  );
 }
-

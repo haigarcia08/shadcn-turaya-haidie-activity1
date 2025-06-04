@@ -1,37 +1,32 @@
-import type {Metadata} from "next";
-import {DM_Sans} from "next/font/google";
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import {SiteHeader} from "@/components/site-header";
 import React from "react";
-import {SiteFooter} from "@/components/site-footer";
 import GoogleAnalyticsInit from "@/lib/ga";
+import { ThemeProvider } from "next-themes";
 
-const inter = DM_Sans({
-    subsets: ["latin"],
-    weight: ['300', '400', '500']
+const inter = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"]
 });
 
 export const metadata: Metadata = {
-    title: "Shadcn UI Examples",
-    description: "Shadcn UI examples for your project. Get the code and add it to your project.",
+  title: "shadcn/ui Examples",
+  description:
+    "Tailwind CSS and React compatible sample applications and components built with shadcn/ui support. Open source."
 };
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
+  children
+}: Readonly<{
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="en">
-        <body
-            suppressHydrationWarning
-            className={`${inter.className} antialiased`}
-        >
-        <SiteHeader/>
-        {children}
-        <SiteFooter/>
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning className={`${inter.className} antialiased`}>
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
         {process.env.NODE_ENV === "production" ? <GoogleAnalyticsInit /> : null}
-        </body>
-        </html>
-    );
+      </body>
+    </html>
+  );
 }

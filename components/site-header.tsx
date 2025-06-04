@@ -1,107 +1,77 @@
-import Link from "next/link"
-import {Menu} from "lucide-react"
-import {Button} from "@/components/ui/button"
-import {Logo} from "@/components/logo"
-import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
-import {categories} from "@/app/data";
-import {DialogHeader} from "next/dist/client/components/react-dev-overlay/ui/components/dialog";
-import {DialogTitle} from "@radix-ui/react-dialog";
-import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
-
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
+import data from "@/app/(site)/[slug]/data.json";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { GithubIcon } from "lucide-react";
+import { HeaderSearch } from "@/components/search";
 
 export function SiteHeader() {
-    return (
-        <header
-            className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur border-border/70 supports-[backdrop-filter]:bg-background/60">
-            <div className="container mx-auto px-4 flex h-16 items-center">
-                <div className="mr-4 flex">
-                    <Link href="/" className="mr-6 flex items-center space-x-2">
-                        <Logo/>
-                    </Link>
-                </div>
-                {/*<div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-                    <nav className="hidden md:flex items-center">
-                        <Button variant="ghost" asChild>
-                            <Link href="/free">
-                                Free
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" asChild>
-                            <Link href="/premium">
-                                Premium
-                            </Link>
-                        </Button>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger>
-                                <Button variant="ghost" asChild>
-                                    <Link href="/categories">
-                                        Categories
-                                    </Link>
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent>
-                                {
-                                    categories.map((category, key) => <DropdownMenuItem key={key} asChild>
-                                        <Link href={category.slug}
-                                              className="text-sm font-medium transition-colors hover:text-primary">
-                                            {category.name}
-                                        </Link>
-                                    </DropdownMenuItem>)
-                                }
-
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                    </nav>
-
-                     Mobile navigation
-                    <div className="md:hidden flex-1 flex justify-end">
-                        <MobileNav/>
-                    </div>
-
-                    <div className="flex items-center space-x-2">
-                        <Button asChild>
-                            <Link target="_blank"
-                                  href="https://docs.google.com/forms/d/e/1FAIpQLSeO3p92JgmsiRW3nGoZ0AbdudHo4k37B2--5NM-h7CXj_d06g/viewform">Submit</Link>
-                        </Button>
-                    </div>
-                </div>*/}
-            </div>
-        </header>
-    )
-}
-
-function MobileNav() {
-    return (
-        <Sheet>
-            <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                    <Menu className="h-5 w-5"/>
-                    <span className="sr-only">Toggle menu</span>
+  return (
+    <header className="bg-background/95 border-border/70 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
+      <div className="flex h-16 items-center justify-between px-4">
+        <div className="mr-4 flex">
+          <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Logo />
+          </Link>
+        </div>
+        <div className="hidden md:block">
+          <HeaderSearch />
+        </div>
+        <div className="flex items-center justify-between space-x-2 md:justify-end">
+          <nav className="flex items-center">
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <Button variant="ghost" asChild>
+                  <Link href="/categories">Examples</Link>
                 </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className='px-2'>
-                <VisuallyHidden>
-                    <DialogHeader>
-                        <DialogTitle>Dialog</DialogTitle>
-                    </DialogHeader>
-                </VisuallyHidden>
-                <nav className="flex flex-col gap-1 mt-6">
-                    <Link href="/free" className="text-sm block p-2 font-medium transition-colors hover:text-primary">
-                        Free Templates
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {data.map((item, key) => (
+                  <DropdownMenuItem key={key} asChild>
+                    <Link
+                      href={item.href}
+                      className="hover:text-primary text-sm font-medium transition-colors">
+                      {item.meta.title}
                     </Link>
-                    <Link href="/premium"
-                          className="text-sm block p-2 font-medium transition-colors hover:text-primary">
-                        Premium Templates
-                    </Link>
-                    {
-                        categories.map((category, key) => <Link href={category.slug} key={key}
-                                                                className="text-sm block p-2 font-medium transition-colors hover:text-primary">
-                            {category.name}
-                        </Link>)
-                    }
-                </nav>
-            </SheetContent>
-        </Sheet>
-    )
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://github.com/shadcn-examples" target="_blank">
+                <GithubIcon />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://x.com/ShadcnExamples" target="_blank" className="text-foreground">
+                <svg
+                  className="size-3.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  shapeRendering="geometricPrecision"
+                  textRendering="geometricPrecision"
+                  imageRendering="optimizeQuality"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  viewBox="0 0 512 462.799">
+                  <path
+                    fillRule="nonzero"
+                    fill="currentColor"
+                    d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
+                  />
+                </svg>
+              </Link>
+            </Button>
+            <ThemeToggle />
+          </nav>
+        </div>
+      </div>
+    </header>
+  );
 }
-
