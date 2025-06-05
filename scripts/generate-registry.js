@@ -28,38 +28,35 @@ function walkDirectory(dir) {
   return fileList;
 }
 
-function createGroupItem(groupName, filePaths) {
+function createGroupItem(group, filePaths) {
   const registryDeps = new Set();
   const files = [];
 
   filePaths.forEach((filePath) => {
     const content = fs.readFileSync(filePath, "utf-8");
+
+    // Sadece UI dependency'lerini registryDependencies'e ekle
     extractRegistryDependencies(content).forEach((dep) => registryDeps.add(dep));
 
+    // Sadece examples altındaki dosyaları files'a ekle
     const relativePath = path.relative(path.join(__dirname, "../"), filePath).replace(/\\/g, "/");
 
-    const targetPathParts = relativePath.replace(/^examples\//, "").split("/");
+    // Şunu kontrol edelim:
+    if (!relativePath.startsWith("examples/")) return;
 
-    const target = `app/${targetPathParts.join("/")}`;
+    const groupRelative = path.relative(path.join(COMPONENTS_ROOT), filePath).replace(/\\/g, "/");
 
     files.push({
       path: relativePath,
-      type: relativePath.endsWith("page.tsx")
-        ? "registry:page"
-        : /\.(json|ts)$/.test(relativePath)
-          ? "registry:file"
-          : "registry:component",
-      target
+      type: "registry:component",
+      target: `components/${groupRelative}`
     });
   });
 
-  const name = groupName.replace(/[^a-zA-Z0-9-]/g, "-").toLowerCase();
-  const title = groupName.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-
   return {
-    name,
-    type: "registry:block",
-    title,
+    name: group,
+    type: "registry:page",
+    title: group.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
     registryDependencies: Array.from(registryDeps),
     files
   };
