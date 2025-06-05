@@ -6,9 +6,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${process.env.BASE_URL}/${item.href}`,
     lastModified: new Date(),
     changeFrequency: "daily",
-    priority: 1,
+    priority: 0.5,
     images: [`${process.env.BASE_URL}/${item.info.cover_image}`]
   }));
 
-  return [...routesList];
+  return [
+    {
+      url: `${process.env.BASE_URL}`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.5
+    },
+    ...routesList
+  ];
 }
