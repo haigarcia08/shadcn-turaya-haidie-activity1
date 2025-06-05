@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "href": "admin-dashboard",
     "meta": {
       "title": "Admin Dashboard",
@@ -16,7 +15,6 @@
     }
   },
   {
-    "id": 1,
     "href": "tasks",
     "meta": {
       "title": "Tasks",
@@ -32,7 +30,6 @@
     }
   },
   {
-    "id": 1,
     "href": "playground",
     "meta": {
       "title": "Playground",
@@ -48,7 +45,6 @@
     }
   },
   {
-    "id": 1,
     "href": "authentication",
     "meta": {
       "title": "Authentication",
@@ -62,5 +58,36 @@
       "demo_url": "",
       "last_updated": ""
     }
+  },
+  {
+    "href": "profile-page",
+    "meta": {
+      "title": "Profile Page",
+      "description": "Create profile ui for users. Add forms so they can update their information.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "profile-page.png",
+      "description": "Create profile ui for users. Add forms so they can update their information.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "href": "ai-chat",
+    "meta": {
+      "title": "AI Chat",
+      "description": "Chat ui and components for ai applications.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Chat ui and components for ai applications.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isComing": true
   }
 ]

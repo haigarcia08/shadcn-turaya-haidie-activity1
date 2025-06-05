@@ -34,7 +34,7 @@ export function SiteHeader() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {data.map((item, key) => (
-                  <DropdownMenuItem key={key} asChild>
+                  <DropdownMenuItem key={key} asChild disabled={!!item?.isComing}>
                     <Link
                       href={item.href}
                       className="hover:text-primary text-sm font-medium transition-colors">

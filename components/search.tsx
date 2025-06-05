@@ -53,6 +53,7 @@ export function HeaderSearch() {
           <CommandEmpty>No results found.</CommandEmpty>
           {data.map((item) => (
             <CommandItem
+              disabled={!!item?.isComing}
               onSelect={() => {
                 if (item.href) {
                   setOpen(false);

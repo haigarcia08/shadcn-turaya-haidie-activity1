@@ -1,8 +1,7 @@
 import data from "@/app/(site)/[slug]/data.json";
-import { Button } from "@/components/ui/button";
 import ComponentIframe from "@/app/(site)/[slug]/components/component-iframe";
-import Link from "next/link";
 import Image from "next/image";
+import Categories from "@/components/categories";
 
 export default function Page() {
   return (
@@ -15,13 +14,7 @@ export default function Page() {
         </p>
       </header>
 
-      <div className="mb-6 flex flex-wrap gap-3">
-        {data.map((item) => (
-          <Button variant="outline" className="rounded-full" asChild>
-            <Link href={`/${item.href}`}>{item.meta.title}</Link>
-          </Button>
-        ))}
-      </div>
+      <Categories />
 
       <div className="block lg:hidden">
         <figure className="relative aspect-video w-full">
