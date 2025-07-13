@@ -89,5 +89,21 @@
       "last_updated": ""
     },
     "isComing": false
+  },
+  {
+    "href": "projects-list",
+    "meta": {
+      "title": "Projects List",
+      "description": "UI component that lists projects",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "UI component that lists projects",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isComing": false
   }
 ]
