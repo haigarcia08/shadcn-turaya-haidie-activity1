@@ -84,6 +84,39 @@
       ]
     },
     {
+      "name": "ai-chat",
+      "type": "registry:page",
+      "title": "Ai Chat",
+      "registryDependencies": [
+        "button",
+        "input",
+        "scroll-area",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "examples/ai-chat/components/chat-interface.tsx",
+          "type": "registry:component",
+          "target": "components/ai-chat/components/chat-interface.tsx"
+        },
+        {
+          "path": "examples/ai-chat/components/sidebar.tsx",
+          "type": "registry:component",
+          "target": "components/ai-chat/components/sidebar.tsx"
+        },
+        {
+          "path": "examples/ai-chat/components/welcome-screen.tsx",
+          "type": "registry:component",
+          "target": "components/ai-chat/components/welcome-screen.tsx"
+        },
+        {
+          "path": "examples/ai-chat/page.tsx",
+          "type": "registry:component",
+          "target": "components/ai-chat/page.tsx"
+        }
+      ]
+    },
+    {
       "name": "authentication",
       "type": "registry:page",
       "title": "Authentication",
