@@ -3,7 +3,7 @@
     "href": "admin-dashboard",
     "meta": {
       "title": "Admin Dashboard",
-      "description": "A standard clean admin dashboard template.",
+      "description": "A standard clean admin dashboard template. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -18,7 +18,7 @@
     "href": "tasks",
     "meta": {
       "title": "Tasks",
-      "description": "Task list. List and filter tasks.",
+      "description": "Task list. List and filter tasks. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -48,7 +48,7 @@
     "href": "authentication",
     "meta": {
       "title": "Authentication",
-      "description": "Authentication pages. Login page, registration page and more",
+      "description": "Authentication pages. Login page, registration page and more. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -63,7 +63,7 @@
     "href": "profile-page",
     "meta": {
       "title": "Profile Page",
-      "description": "Create profile ui for users. Add forms so they can update their information.",
+      "description": "Create profile ui for users. Add forms so they can update their information. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -78,7 +78,7 @@
     "href": "ai-chat",
     "meta": {
       "title": "AI Chat",
-      "description": "Chat ui and components for ai applications.",
+      "description": "Chat ui and components for ai applications. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -94,7 +94,7 @@
     "href": "projects-list",
     "meta": {
       "title": "Projects List",
-      "description": "UI component that lists projects",
+      "description": "UI component that lists projects. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -105,5 +105,37 @@
       "last_updated": ""
     },
     "isComing": false
+  },
+  {
+    "href": "kanban-board",
+    "meta": {
+      "title": "Kanban Board",
+      "description": "A Kanban board is a visual workflow management tool that helps track tasks through stages like To Do, In Progress, and Done. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A Kanban board visually tracks tasks through different stages. ",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isComing": true
+  },
+  {
+    "href": "product-list",
+    "meta": {
+      "title": "Product List",
+      "description": "A template where products are listed and filtered. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "List the products and filter them optionally.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isComing": true
   }
 ]

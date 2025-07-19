@@ -21,29 +21,32 @@ export function SiteHeader() {
             <Logo />
           </Link>
         </div>
-        <div className="hidden md:block">
-          <HeaderSearch />
-        </div>
+        <nav className="flex items-center">
+          <Button variant="ghost" asChild>
+            <Link href="/">Home</Link>
+          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <Button variant="ghost" asChild>
+                <Link href="/categories">Examples</Link>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {data.map((item, key) => (
+                <DropdownMenuItem key={key} asChild disabled={!!item?.isComing}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-primary text-sm font-medium transition-colors">
+                    {item.meta.title}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </nav>
         <div className="flex items-center justify-between space-x-2 md:justify-end">
+          <HeaderSearch />
           <nav className="flex items-center">
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Button variant="ghost" asChild>
-                  <Link href="/categories">Examples</Link>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {data.map((item, key) => (
-                  <DropdownMenuItem key={key} asChild disabled={!!item?.isComing}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-primary text-sm font-medium transition-colors">
-                      {item.meta.title}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
             <Button variant="ghost" size="icon" asChild>
               <Link href="https://github.com/shadcn-examples" target="_blank">
                 <GithubIcon />

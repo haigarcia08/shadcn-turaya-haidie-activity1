@@ -81,7 +81,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             lineHeight: 1.8,
             whiteSpace: "pre-wrap"
           }}>
-          <b>{exampleData.meta.description}</b>
+          <b>{exampleData.info.description}</b>
         </div>
         <div tw="ml-3 mt-6 flex">
           <a tw="flex gap-3 items-center justify-center rounded-md bg-black px-7 py-4 text-base font-medium text-white">
