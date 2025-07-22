@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className={`${inter.className} antialiased`}>
         <ThemeProvider attribute="class">{children}</ThemeProvider>
-        {process.env.NODE_ENV === "production" ? <GoogleAnalyticsInit /> : null}
+        {process.env.NODE_ENV === "production" ? <GoogleAnalyticsInit /> : "test"}
       </body>
     </html>
   );
