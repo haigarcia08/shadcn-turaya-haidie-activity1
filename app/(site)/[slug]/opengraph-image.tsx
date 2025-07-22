@@ -18,9 +18,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const { slug } = await params;
   const exampleData: Example | undefined = data.find((item) => item.href === slug);
 
-  const interSemiBold = await readFile(
-    join(process.cwd(), "assets/Inter/static/Inter_28pt-SemiBold.ttf")
-  );
+  const interSemiBold = await readFile(join(process.cwd(), "assets/Inter/Inter_28pt-SemiBold.ttf"));
 
   const logoSrc = await fetch(new URL("logo.png", process.env.BASE_URL)).then((res) =>
     res.arrayBuffer()
