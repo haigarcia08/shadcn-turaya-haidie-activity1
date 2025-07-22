@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export default function GoogleAnalyticsInit() {
   useEffect(() => {
-    ReactGA.initialize(`${process.env.GA_KEY}`);
+    ReactGA.initialize(`${process.env.NEXT_PUBLIC_GA_KEY}`);
     ReactGA.send("pageview");
   });
 
