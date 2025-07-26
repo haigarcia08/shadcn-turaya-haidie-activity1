@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import GoogleAnalyticsInit from "@/lib/ga";
 import { ThemeProvider } from "next-themes";
 
-const inter = Plus_Jakarta_Sans({
+const geist = Geist({
   subsets: ["latin"],
   weight: ["300", "400", "500"]
 });
 
 export const metadata: Metadata = {
-  title: "shadcn/ui Examples",
+  title: "shadcn/ui Examples and Components",
   description:
-    "Tailwind CSS and React compatible sample applications and components built with shadcn/ui support. Open source."
+    "Shadcn/ui examples apps and components. For Tailwind and React. Open source. TypeScript compatible."
 };
 
 export default function RootLayout({
@@ -23,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning className={`${inter.className} antialiased`}>
+      <body suppressHydrationWarning className={`${geist.className} `}>
         <ThemeProvider attribute="class">{children}</ThemeProvider>
-        {process.env.NODE_ENV === "production" ? <GoogleAnalyticsInit /> : "test"}
+        {process.env.NODE_ENV === "production" ? <GoogleAnalyticsInit /> : null}
       </body>
     </html>
   );

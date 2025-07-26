@@ -33,7 +33,7 @@
     "href": "playground",
     "meta": {
       "title": "Playground",
-      "description": "",
+      "description": "Create an app that people can interact with with the Playground template. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -48,7 +48,7 @@
     "href": "authentication",
     "meta": {
       "title": "Authentication",
-      "description": "Authentication pages. Login page, registration page and more. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "description": "Authentication pages. Login page, sign-in page and more. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
@@ -78,7 +78,7 @@
     "href": "ai-chat",
     "meta": {
       "title": "AI Chat",
-      "description": "Chat ui and components for ai applications. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "description": "Chat ui and components for ai apps. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
