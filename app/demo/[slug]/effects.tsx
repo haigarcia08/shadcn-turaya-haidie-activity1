@@ -1,8 +1,19 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { Logo } from "@/components/logo";
 
 export default function Effects() {
+  const [isInIframe, setIsInIframe] = useState(false);
+  const params = useParams();
+
+  useEffect(() => {
+    setIsInIframe(window.top === window.self);
+  }, []);
+
   useEffect(() => {
     const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     document.documentElement.classList.toggle("dark", isDark);
@@ -24,7 +35,9 @@ export default function Effects() {
     const observer = new ResizeObserver(sendHeight);
     observer.observe(document.body);
 
-    document.body.style.overflow = "hidden";
+    if (isInIframe) {
+      document.body.style.overflow = "hidden";
+    }
 
     return () => {
       observer.disconnect();
@@ -42,6 +55,28 @@ export default function Effects() {
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
   }, []);
+
+  if (isInIframe) {
+    return (
+      <div className="bg-gradient-to-b from-blue-500 to-blue-600 py-2">
+        <div className="flex items-center justify-between px-4">
+          <Link href="/">
+            <Logo />
+          </Link>
+          <div className="flex gap-3">
+            <Button size="sm" asChild>
+              <Link href={`/${params.slug}`}>Get Code</Link>
+            </Button>
+            <Button size="sm" asChild>
+              <Link href="/" target="_blank">
+                All Examples
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return null;
 }
