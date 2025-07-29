@@ -107,6 +107,21 @@
     "isComing": false
   },
   {
+    "href": "onboarding-flow",
+    "meta": {
+      "title": "Onboarding Flow",
+      "description": "Step-by-step screens that collect information from users. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Step-by-step screens that collect information from users.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
     "href": "kanban-board",
     "meta": {
       "title": "Kanban Board",
