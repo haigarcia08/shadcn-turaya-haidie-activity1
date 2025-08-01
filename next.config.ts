@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "bundui-images.netlify.app"
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co"
       }
     ]
   }

@@ -11,7 +11,7 @@ export function Logo() {
           alt="..."
         />
       </div>
-      <span className="hidden font-semibold md:inline">Shadcn Examples</span>
+      <span className="hidden font-medium md:inline">Shadcn Examples</span>
     </div>
   );
 }

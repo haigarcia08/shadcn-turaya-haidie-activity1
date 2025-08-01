@@ -122,6 +122,81 @@
     }
   },
   {
+    "href": "product-list",
+    "meta": {
+      "title": "Product List",
+      "description": "A template consisting of a panel for listing and filtering products. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "List the products and filter them optionally.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "href": "coming-soon-page",
+    "meta": {
+      "title": "Coming Soon Page",
+      "description": "A coming soon page announces a future website or product launch. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A coming soon page announces a future website or product launch.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "href": "changelog-page",
+    "meta": {
+      "title": "Changelog Page",
+      "description": "A changelog page lists updates, fixes, and new features of a product over time. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A changelog page lists updates, fixes, and new features of a product over time.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "href": "blog-page",
+    "meta": {
+      "title": "Blog Page",
+      "description": "A blog page is a section of a website where articles, updates, or insights are regularly published. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A blog page is a section of a website where articles, updates, or insights are regularly published.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "href": "pricing-tables",
+    "meta": {
+      "title": "Pricing Tables",
+      "description": "A pricing table displays different product or service plans with their features and costs. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A pricing table displays different product or service plans with their features and costs.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
     "href": "kanban-board",
     "meta": {
       "title": "Kanban Board",
@@ -131,22 +206,6 @@
     "info": {
       "cover_image": "",
       "description": "A Kanban board visually tracks tasks through different stages. ",
-      "framework": "",
-      "demo_url": "",
-      "last_updated": ""
-    },
-    "isComing": true
-  },
-  {
-    "href": "product-list",
-    "meta": {
-      "title": "Product List",
-      "description": "A template where products are listed and filtered. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
-      "image": ""
-    },
-    "info": {
-      "cover_image": "",
-      "description": "List the products and filter them optionally.",
       "framework": "",
       "demo_url": "",
       "last_updated": ""
