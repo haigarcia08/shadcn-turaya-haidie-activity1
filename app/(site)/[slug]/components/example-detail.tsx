@@ -3,6 +3,10 @@ import ComponentIframe from "@/app/(site)/[slug]/components/component-iframe";
 import { Example } from "@/types/example";
 import CodeDialog from "@/app/(site)/[slug]/components/code-dialog";
 import Categories from "@/components/categories";
+import { Button } from "@/components/ui/button";
+import { FullscreenIcon } from "lucide-react";
+import Link from "next/link";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function ExampleDetail({ example }: { example: Example }) {
   return (
@@ -14,8 +18,20 @@ export default function ExampleDetail({ example }: { example: Example }) {
         </p>
       </header>
 
-      <div className="mb-6">
+      <div className="mb-6 space-x-4">
         <CodeDialog example={example} />
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button variant="outline">
+              <Link href={`/demo/${example.href}`} target="_blank">
+                <FullscreenIcon />
+              </Link>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Full screen</p>
+          </TooltipContent>
+        </Tooltip>
       </div>
 
       <div className="block lg:hidden">
