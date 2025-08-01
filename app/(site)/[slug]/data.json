@@ -197,6 +197,21 @@
     }
   },
   {
+    "href": "chat-app",
+    "meta": {
+      "title": "Chat App",
+      "description": "A chat app template is a ready-made ui for quickly creating messaging apps. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A chat app template is a ready-made ui for quickly creating messaging apps.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
     "href": "kanban-board",
     "meta": {
       "title": "Kanban Board",
