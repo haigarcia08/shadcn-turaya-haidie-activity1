@@ -41,7 +41,7 @@ export default async function CodeDialog({ example }: Props) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="rounded-full">
+        <Button variant="outline">
           <CodeIcon />
           Get the Code
         </Button>

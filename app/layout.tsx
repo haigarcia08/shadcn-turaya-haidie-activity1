@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import GoogleAnalyticsInit from "@/lib/ga";
 import { ThemeProvider } from "next-themes";
 
-const geist = Geist({
+const geist = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500"]
 });
 
 export const metadata: Metadata = {
-  title: "shadcn/ui Examples and Components",
+  title: "Shadcnexamples: Shadcn UI Examples, Components and Blocks",
   description:
-    "Shadcn/ui examples apps and components. For Tailwind and React. Open source. TypeScript compatible."
+    "Shadcn UI examples, components, and blocks built with Tailwind CSS. For React and Vue.js. Open source. TypeScript compatible."
 };
 
 export default function RootLayout({

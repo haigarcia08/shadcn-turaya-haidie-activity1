@@ -52,7 +52,7 @@ export function HeaderSearch() {
         </div>
       </div>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Search in list" />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           {data.map((item) => (

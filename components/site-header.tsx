@@ -15,13 +15,16 @@ import { HeaderSearch } from "@/components/search";
 export function SiteHeader() {
   return (
     <header className="bg-background/95 border-border/70 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
-      <div className="flex h-16 items-center justify-between px-4">
+      <div className="grid h-16 grid-cols-3 items-center justify-between px-4">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo />
+            <span className="text-muted-foreground mt-0.5 text-[10px] tracking-widest uppercase select-none">
+              Beta
+            </span>
           </Link>
         </div>
-        <nav className="flex items-center">
+        <nav className="flex items-center justify-center">
           <Button variant="ghost" asChild>
             <Link href="/">Home</Link>
           </Button>
@@ -43,6 +46,11 @@ export function SiteHeader() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+          <Button variant="ghost" asChild>
+            <Link href="https://github.com/shadcn-examples" target="_blank">
+              Github
+            </Link>
+          </Button>
         </nav>
         <div className="flex items-center justify-between space-x-2 md:justify-end">
           <HeaderSearch />

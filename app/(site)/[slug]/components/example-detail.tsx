@@ -18,11 +18,10 @@ export default function ExampleDetail({ example }: { example: Example }) {
         </p>
       </header>
 
-      <div className="mb-6 space-x-4">
-        <CodeDialog example={example} />
+      <div className="mb-4 flex justify-end space-x-3">
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button variant="outline">
+            <Button variant="outline" size="icon" asChild>
               <Link href={`/demo/${example.href}`} target="_blank">
                 <FullscreenIcon />
               </Link>
@@ -32,6 +31,7 @@ export default function ExampleDetail({ example }: { example: Example }) {
             <p>Full screen</p>
           </TooltipContent>
         </Tooltip>
+        <CodeDialog example={example} />
       </div>
 
       <div className="block lg:hidden">

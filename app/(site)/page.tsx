@@ -5,10 +5,12 @@ import Categories from "@/components/categories";
 
 export default function Page() {
   return (
-    <div className="container mx-auto space-y-8 px-4 py-10 lg:space-y-16 lg:py-16">
-      <header className="space-y-4 text-center">
-        <h1 className="text-3xl font-semibold lg:text-5xl"> Shadcn UI Examples</h1>
-        <p className="text-muted-foreground mx-auto max-w-2xl lg:text-xl">
+    <div className="container mx-auto space-y-10 px-4 py-10 lg:space-y-20 lg:py-20">
+      <header className="mx-auto max-w-3xl space-y-4 text-center">
+        <h1 className="text-3xl font-semibold lg:text-5xl lg:leading-14">
+          Advanced Shadcn UI examples and app templates
+        </h1>
+        <p className="text-muted-foreground mx-auto max-w-2xl lg:text-lg">
           Tailwind CSS and React compatible sample applications and components built with shadcn/ui
           support. Download or copy the code to your project with the registry. Open source.
         </p>
