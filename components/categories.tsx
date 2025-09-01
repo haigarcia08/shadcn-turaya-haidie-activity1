@@ -5,8 +5,9 @@ import Link from "next/link";
 export default function Categories() {
   return (
     <div className="mb-6 flex flex-wrap gap-3">
-      {data.map((item) => (
+      {data.map((item, i) => (
         <Button
+          key={i}
           variant="outline"
           className="rounded-full"
           asChild={!item?.isComing}

@@ -261,49 +261,46 @@
     "href": "pos-app",
     "meta": {
       "title": "Point of Sale (POS) ",
-      "description": "Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "description": "It is a template used to process sales, payments, and manage transactions. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },
     "info": {
       "cover_image": "",
-      "description": "",
+      "description": "Point of Sale (POS) is a template used to process sales, payments, and manage transactions.",
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isComing": true
-  },
-  {
-    "href": "social-media",
-    "meta": {
-      "title": "Social Media",
-      "description": "Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
-      "image": ""
-    },
-    "info": {
-      "cover_image": "",
-      "description": "",
-      "framework": "",
-      "demo_url": "",
-      "last_updated": ""
-    },
-    "isComing": true
+    }
   },
   {
     "href": "mail-app",
     "meta": {
       "title": "Mail App",
-      "description": "Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "description": "Easily organize incoming and outgoing mail with the mail management template. Built with shadcn/ui, React, Next.js and Tailwind CSS.",
       "image": ""
     },
     "info": {
       "cover_image": "",
-      "description": "",
+      "description": "A mail app is an application for sending, receiving, and managing emails.",
       "framework": "",
       "demo_url": "",
       "last_updated": ""
+    }
+  },
+  {
+    "href": "social-media",
+    "meta": {
+      "title": "Social Media",
+      "description": "A template for connecting, sharing and communicating with others online. Built with shadcn/ui, React, Next.js and Tailwind CSS.",
+      "image": ""
     },
-    "isComing": true
+    "info": {
+      "cover_image": "",
+      "description": "A template for connecting, sharing and communicating with others online.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
   },
   {
     "href": "todo-list-app",

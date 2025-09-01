@@ -15,7 +15,7 @@ export async function generateMetadata({
   if (!example) return {};
 
   return {
-    title: `${example.meta.title} Demo - Shadcn UI Examples and Components`,
+    title: `${example.meta.title} - Shadcn UI Examples`,
     description: example.meta.description
   };
 }
