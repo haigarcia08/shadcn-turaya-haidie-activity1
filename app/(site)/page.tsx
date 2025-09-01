@@ -6,13 +6,14 @@ import Categories from "@/components/categories";
 export default function Page() {
   return (
     <div className="container mx-auto space-y-10 px-4 py-10 lg:space-y-20 lg:py-20">
-      <header className="mx-auto max-w-3xl space-y-4 text-center">
+      <header className="mx-auto max-w-4xl space-y-4 text-center">
         <h1 className="text-3xl font-semibold lg:text-5xl lg:leading-14">
-          Advanced Shadcn UI examples and app templates
+          Premium Shadcn UI Examples & Ready-to-Use App Templates
         </h1>
         <p className="text-muted-foreground mx-auto max-w-2xl lg:text-lg">
-          Tailwind CSS and React compatible sample applications and components built with shadcn/ui
-          support. Download or copy the code to your project with the registry. Open source.
+          Sample applications and components built with shadcn/ui, fully compatible with React and
+          Tailwind CSS. Open source—easily download or integrate the code into your project via the
+          registry. A total of {data.length} example applications included.
         </p>
       </header>
 

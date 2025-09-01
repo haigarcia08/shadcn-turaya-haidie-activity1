@@ -242,22 +242,6 @@
     }
   },
   {
-    "href": "file-manager",
-    "meta": {
-      "title": "File Manager",
-      "description": "Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
-      "image": ""
-    },
-    "info": {
-      "cover_image": "",
-      "description": "",
-      "framework": "",
-      "demo_url": "",
-      "last_updated": ""
-    },
-    "isComing": true
-  },
-  {
     "href": "pos-app",
     "meta": {
       "title": "Point of Sale (POS) ",
@@ -270,7 +254,8 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    }
+    },
+    "isNew": true
   },
   {
     "href": "mail-app",
@@ -285,7 +270,8 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    }
+    },
+    "isNew": true
   },
   {
     "href": "social-media",
@@ -300,12 +286,77 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    }
+    },
+    "isNew": true
+  },
+  {
+    "href": "music-app",
+    "meta": {
+      "title": "Music App",
+      "description": "Music app is an app ui template used to stream, play and manage audio tracks. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Music app is an app ui template used to stream, play and manage audio tracks.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isNew": true
+  },
+  {
+    "href": "payment-admin-dashboard",
+    "meta": {
+      "title": "Payment Dashboard",
+      "description": "It is a dashboard UI template used to manage, track and edit invoices and payments. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "It is a dashboard UI template used to manage, track and edit invoices and payments.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isNew": true
+  },
+  {
+    "href": "file-manager-admin-dashboard",
+    "meta": {
+      "title": "File Manager Dashboard",
+      "description": "It is an admin dashboard template used to organize, access and manage files and folders. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "It is an admin dashboard template used to organize, access and manage files and folders.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isNew": true
   },
   {
     "href": "todo-list-app",
     "meta": {
       "title": "Todo List App",
+      "description": "A to-do list app is an application for creating, organizing, and tracking tasks. Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A to-do list app is an application for creating, organizing, and tracking tasks.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isComing": true
+  },
+  {
+    "href": "file-manager",
+    "meta": {
+      "title": "File Manager",
       "description": "Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
       "image": ""
     },

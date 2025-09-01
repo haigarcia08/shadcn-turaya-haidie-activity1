@@ -9,8 +9,10 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { GithubIcon } from "lucide-react";
+import { ChevronDownIcon, GithubIcon } from "lucide-react";
 import { HeaderSearch } from "@/components/search";
+import { Badge } from "@/components/ui/badge";
+import { IconCaretDown } from "@tabler/icons-react";
 
 export function SiteHeader() {
   return (
@@ -31,7 +33,9 @@ export function SiteHeader() {
           <DropdownMenu>
             <DropdownMenuTrigger>
               <Button variant="ghost" asChild>
-                <Link href="/categories">Examples</Link>
+                <Link href="/categories">
+                  Examples <ChevronDownIcon className="-m-1" />{" "}
+                </Link>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -41,22 +45,23 @@ export function SiteHeader() {
                     href={item.href}
                     className="hover:text-primary text-sm font-medium transition-colors">
                     {item.meta.title}
+                    {item?.isNew ? <Badge className="bg-green-600">New</Badge> : false}
                   </Link>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="ghost" asChild>
-            <Link href="https://github.com/shadcn-examples" target="_blank">
+          <Button variant="ghost" className="hidden lg:flex" asChild>
+            <Link href="https://github.com/shadcn-examples/shadcn-examples" target="_blank">
               Github
             </Link>
           </Button>
         </nav>
-        <div className="flex items-center justify-between space-x-2 md:justify-end">
-          <HeaderSearch />
+        <div className="flex items-center justify-between justify-end space-x-2">
           <nav className="flex items-center">
+            <HeaderSearch />
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com/shadcn-examples" target="_blank">
+              <Link href="https://github.com/shadcn-examples/shadcn-examples" target="_blank">
                 <GithubIcon />
               </Link>
             </Button>

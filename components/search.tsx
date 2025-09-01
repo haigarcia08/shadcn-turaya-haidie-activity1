@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import data from "@/app/(site)/[slug]/data.json";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export function HeaderSearch() {
   const [open, setOpen] = React.useState(false);
@@ -66,6 +67,7 @@ export function HeaderSearch() {
               }}>
               <CircleDotDashedIcon />
               <span>{item.meta.title}</span>
+              {item?.isNew ? <Badge className="bg-green-600">New</Badge> : false}
             </CommandItem>
           ))}
         </CommandList>
