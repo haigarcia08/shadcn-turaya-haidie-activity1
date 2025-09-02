@@ -57,7 +57,7 @@ export function SiteHeader() {
             </Link>
           </Button>
         </nav>
-        <div className="flex items-center justify-between justify-end space-x-2">
+        <div className="flex items-center justify-end space-x-2">
           <nav className="flex items-center">
             <HeaderSearch />
             <Button variant="ghost" size="icon" asChild>
