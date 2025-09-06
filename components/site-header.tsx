@@ -38,7 +38,7 @@ export function SiteHeader() {
                 </Link>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="grid grid-cols-2">
               {data.map((item, key) => (
                 <DropdownMenuItem key={key} asChild disabled={!!item?.isComing}>
                   <Link

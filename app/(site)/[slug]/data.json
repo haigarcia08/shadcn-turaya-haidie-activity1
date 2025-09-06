@@ -254,8 +254,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "mail-app",
@@ -270,8 +269,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "social-media",
@@ -286,8 +284,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "music-app",
@@ -299,6 +296,53 @@
     "info": {
       "cover_image": "",
       "description": "Music app is an app ui template used to stream, play and manage audio tracks.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
+  },
+  {
+    "href": "settings-page",
+    "meta": {
+      "title": "Settings Page",
+      "description": "Manage and customize your app preferences on a settings page. Built with React, Tailwind CSS, Shadcn UI & Radix UI.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Manage and customize your app preferences on a settings page.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isNew": true
+  },
+  {
+    "href": "activity-feed",
+    "meta": {
+      "title": "Activity Feed",
+      "description": "Track events, user actions, and updates occurring in the app. React event stream component built with Tailwind CSS, Shadcn UI, and Radix UI.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Track events, user actions, and updates occurring in the app.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isNew": true
+  },
+  {
+    "href": "timeline",
+    "meta": {
+      "title": "Timeline",
+      "description": "Visualize chronological events and milestones in a clear, interactive timeline. React timeline component built with Tailwind CSS, Shadcn UI & Radix UI.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Visualize chronological events and milestones in a clear, interactive timeline.",
       "framework": "",
       "demo_url": "",
       "last_updated": ""
@@ -318,8 +362,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "file-manager-admin-dashboard",
@@ -334,8 +377,38 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
+    }
+  },
+  {
+    "href": "event-calendar",
+    "meta": {
+      "title": "Event Calendar",
+      "description": "Display and manage events with an interactive event calendar. React event calendar component built with Tailwind CSS, Shadcn UI & Radix UI.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Display and manage events with an interactive event calendar.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
     },
     "isNew": true
+  },
+  {
+    "href": "file-manager",
+    "meta": {
+      "title": "File Manager App",
+      "description": "Organize, upload, and manage files efficiently with a file manager app. Built with React, Tailwind CSS, Shadcn UI & Radix UI.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "Organize, upload, and manage files efficiently with a file manager app.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    }
   },
   {
     "href": "todo-list-app",
@@ -354,15 +427,31 @@
     "isComing": true
   },
   {
-    "href": "file-manager",
+    "href": "checkout-page",
     "meta": {
-      "title": "File Manager",
-      "description": "Built with Next.js, React, Tailwind CSS and shadcn/ui. Supports Typescript.",
+      "title": "Checkout Page",
+      "description": "A secure, conversion-optimized checkout page for fast payments and clear order review. Built with React, Tailwind CSS, Shadcn UI & Radix UI.",
       "image": ""
     },
     "info": {
       "cover_image": "",
-      "description": "",
+      "description": "A secure, conversion-optimized checkout page for fast payments and clear order review.",
+      "framework": "",
+      "demo_url": "",
+      "last_updated": ""
+    },
+    "isComing": true
+  },
+  {
+    "href": "help-center",
+    "meta": {
+      "title": "Help Center",
+      "description": "A searchable help center with guides, FAQs and support resources to help users quickly find answers. Built with React, Tailwind CSS, Shadcn UI & Radix UI.",
+      "image": ""
+    },
+    "info": {
+      "cover_image": "",
+      "description": "A searchable help center with guides, FAQs and support resources to help users quickly find answers.",
       "framework": "",
       "demo_url": "",
       "last_updated": ""
