@@ -207,15 +207,15 @@ function Calendar({
         ),
         MonthGrid: ({ className, children, ...props }) => (
           <MonthGrid
-            children={children}
             className={className}
             displayYears={displayYears}
             startMonth={startMonth}
             endMonth={endMonth}
             navView={navView}
             setNavView={setNavView}
-            {...props}
-          />
+            {...props}>
+            {children}
+          </MonthGrid>
         )
       }}
       numberOfMonths={columnsDisplayed}

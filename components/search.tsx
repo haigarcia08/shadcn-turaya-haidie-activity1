@@ -56,8 +56,9 @@ export function HeaderSearch() {
         <CommandInput placeholder="Search in list" />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          {data.map((item) => (
+          {data.map((item, i) => (
             <CommandItem
+              key={i}
               disabled={!!item?.isComing}
               onSelect={() => {
                 if (item.href) {

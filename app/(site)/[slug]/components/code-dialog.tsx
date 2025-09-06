@@ -96,9 +96,11 @@ export default async function CodeDialog({ example }: Props) {
                             </CollapsibleTrigger>
                             <CollapsibleContent>
                               <div className="flex flex-col">
-                                {file.children.map((child) => {
+                                {file.children.map((child, i) => {
                                   const fileContent = extractCodeFromFilePath(child.path);
-                                  return <ComponentCodeTabItem file={child} code={fileContent} />;
+                                  return (
+                                    <ComponentCodeTabItem key={i} file={child} code={fileContent} />
+                                  );
                                 })}
                               </div>
                             </CollapsibleContent>

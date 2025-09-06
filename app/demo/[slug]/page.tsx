@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
 
   const example = data.find((item) => item.href === slug);
-  if (!example) return {};
+  if (!example) return null;
 
   return (
     <Suspense>

@@ -10,7 +10,7 @@ type Props = { file: { name: string; path: string }; code: string };
 export default function ComponentCodeTabItem({ file, code }: Props) {
   const { selectedTab, setCode, setSelectedTab } = useCodeCopyStore();
 
-  const handleClick = (code: string, file: any) => {
+  const handleClick = (code: string, file: { name: string }) => {
     setCode(code);
     setSelectedTab(file.name);
   };
