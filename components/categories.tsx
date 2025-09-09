@@ -10,7 +10,7 @@ export default function Categories() {
         <Button key={i} variant="outline" asChild={!item?.isComing} disabled={!!item?.isComing}>
           <Link href={`/${item.href}`}>
             {item.meta.title}
-            {item?.isComing ? " (Soon)" : false}
+            {item?.isComing ? <Badge className="ms-2 bg-orange-600">Soon</Badge> : false}
             {item?.isNew ? <Badge className="bg-green-600">New</Badge> : false}
           </Link>
         </Button>
