@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "shadcnexamples"
+        hostname: "shadcnexamples.com"
       },
       {
         protocol: "https",
