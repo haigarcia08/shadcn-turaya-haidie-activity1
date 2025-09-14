@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Categories() {
   return (
-    <div className="mb-6 grid grid-cols-6 flex-wrap gap-3">
+    <div className="mb-6 grid flex-wrap gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
       {data.map((item, i) => (
         <Button key={i} variant="outline" asChild={!item?.isComing} disabled={!!item?.isComing}>
           <Link href={`/${item.href}`}>
