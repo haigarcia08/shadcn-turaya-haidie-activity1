@@ -314,8 +314,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "activity-feed",
@@ -330,8 +329,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "timeline",
@@ -346,8 +344,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "payment-admin-dashboard",
@@ -392,8 +389,7 @@
       "framework": "",
       "demo_url": "",
       "last_updated": ""
-    },
-    "isNew": true
+    }
   },
   {
     "href": "file-manager",
@@ -440,7 +436,7 @@
       "demo_url": "",
       "last_updated": ""
     },
-    "isComing": true
+    "isNew": true
   },
   {
     "href": "help-center",
@@ -456,7 +452,7 @@
       "demo_url": "",
       "last_updated": ""
     },
-    "isComing": true
+    "isNew": true
   },
   {
     "href": "roadmap",
@@ -552,6 +548,6 @@
       "demo_url": "",
       "last_updated": ""
     },
-    "isComing": true
+    "isNew": true
   }
 ]
