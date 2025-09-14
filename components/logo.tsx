@@ -6,9 +6,9 @@ export function Logo() {
       <div className="relative size-6">
         <Image
           className="dark:invert"
-          src={`${process.env.BASE_URL ?? process.env.NEXT_PUBLIC_BASE_URL}/logo.png`}
+          src={`${process.env.BASE_URL}/logo.png`}
           fill
-          alt="..."
+          alt="shadcn examples logo"
         />
       </div>
       <span className="hidden font-medium md:inline">Shadcn Examples</span>

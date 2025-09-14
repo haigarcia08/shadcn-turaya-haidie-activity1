@@ -12,7 +12,6 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { ChevronDownIcon, GithubIcon } from "lucide-react";
 import { HeaderSearch } from "@/components/search";
 import { Badge } from "@/components/ui/badge";
-import { IconCaretDown } from "@tabler/icons-react";
 
 export function SiteHeader() {
   return (
